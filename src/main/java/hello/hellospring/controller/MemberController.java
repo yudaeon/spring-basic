@@ -26,9 +26,10 @@ import java.util.List;
         return "members/createMemberForm";
     }
 
-    //회원등록컨트롤러(회원실제등록))
+    //회원등록컨트롤러(회원실제등록)
     @PostMapping(value = "/members/new")
     public String create(MemberForm form) {
+
         Member member = new Member();
         member.setName(form.getName());
         memberService.join(member);
